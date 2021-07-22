@@ -8,26 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var date = Date()
+    
     var body: some View {
-        VStack{
-            Text("Date")
-                .font(.title)
-                .bold()
-            
-            ChartView(
-                values: [10,15,12],
-                names: ["Yoga", "Core", "HIIT"],
-                formatter: {value in String(format: "%.f minutes", value)},
-                textColor: Color.black,
-                colors: [Color.red, Color.purple, Color.orange, ],
-                backgroundColor: Color.white,
-                innerRadiusFraction: 0.75
-            )
-            .padding()
-            Button("Add workout") {
-                print("eeeeee")
+        NavigationView{
+            NavigationLink(destination: DayView()){
+                DatePicker(
+                    "Start Date",
+                    selection: $date,
+                    displayedComponents: [.date]
+                )
+                .datePickerStyle(GraphicalDatePickerStyle())
             }
-            Spacer()
         }
     }
 }

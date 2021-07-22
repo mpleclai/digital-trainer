@@ -141,7 +141,7 @@ struct PieChartView_Previews: PreviewProvider {
             ChartView(
                 values: [10,15,12,20],
                 names: ["Yoga", "Core", "HIIT", "Strength"],
-                formatter: {value in String(format: "%.f", value)},
+                formatter: {value in String(format: "%.f minutes", value)},
                 textColor: Color.black,
                 colors: [Color.red, Color.purple, Color.orange, Color.green],
                 backgroundColor: Color.white,
