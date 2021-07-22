@@ -53,6 +53,13 @@ struct SliceData {
 
 struct PieSlice_Previews: PreviewProvider {
     static var previews: some View {
-        SliceView(sliceData: SliceData(startAngle: Angle(degrees: 0.0), endAngle: Angle(degrees: 120.0), text: "30%", color: Color.black))
+        SliceView(
+            sliceData: SliceData(
+                startAngle: Angle(degrees: 0.0),
+                endAngle: Angle(degrees: 120.0),
+                text: "30%",
+                color: Color.pink
+            )
+        )
     }
 }

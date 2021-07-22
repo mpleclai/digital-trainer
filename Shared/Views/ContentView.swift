@@ -12,13 +12,16 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            NavigationLink(destination: DayView()){
-                DatePicker(
-                    "Start Date",
-                    selection: $date,
-                    displayedComponents: [.date]
-                )
-                .datePickerStyle(GraphicalDatePickerStyle())
+            VStack{
+                NavigationLink(destination: DayView()){
+                    DatePicker(
+                        "Start Date",
+                        selection: $date,
+                        displayedComponents: [.date]
+                    )
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                }
+                Spacer()
             }
         }
     }

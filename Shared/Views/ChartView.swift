@@ -92,7 +92,7 @@ public struct ChartView: View {
             }
             .scaledToFit()
             .background(backgroundColor)
-            .frame(width: .infinity, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: .infinity, height: 300, alignment: .center)
             
             // Rows
             PieChartRows(
@@ -103,6 +103,7 @@ public struct ChartView: View {
                     String(format: "%.0f%%", $0 * 100 / self.values.reduce(0, +))
                 }
             )
+            .padding()
         }
         .foregroundColor(textColor)
     }
@@ -149,5 +150,3 @@ struct PieChartView_Previews: PreviewProvider {
         }
     }
 }
-
-
