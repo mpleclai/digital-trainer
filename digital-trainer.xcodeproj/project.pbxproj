@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935C61C026A8EB38007DA7C6 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61BF26A8EB38007DA7C6 /* Workout.swift */; };
+		935C61C126A8EB38007DA7C6 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61BF26A8EB38007DA7C6 /* Workout.swift */; };
+		935C61C426A8EB77007DA7C6 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61C326A8EB77007DA7C6 /* ChartView.swift */; };
+		935C61C526A8EB77007DA7C6 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61C326A8EB77007DA7C6 /* ChartView.swift */; };
+		935C61C826A8EB93007DA7C6 /* SliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61C726A8EB93007DA7C6 /* SliceView.swift */; };
+		935C61C926A8EB93007DA7C6 /* SliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61C726A8EB93007DA7C6 /* SliceView.swift */; };
 		93BFC79426A71A2F00E06BA1 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFC79326A71A2F00E06BA1 /* Tests_iOS.swift */; };
 		93BFC79F26A71A2F00E06BA1 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFC79E26A71A2F00E06BA1 /* Tests_macOS.swift */; };
 		93BFC7A126A71A2F00E06BA1 /* digital_trainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFC77826A71A2E00E06BA1 /* digital_trainerApp.swift */; };
@@ -35,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		935C61BF26A8EB38007DA7C6 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		935C61C326A8EB77007DA7C6 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		935C61C726A8EB93007DA7C6 /* SliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliceView.swift; sourceTree = "<group>"; };
 		93BFC77826A71A2E00E06BA1 /* digital_trainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = digital_trainerApp.swift; sourceTree = "<group>"; };
 		93BFC77926A71A2E00E06BA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		93BFC77A26A71A2F00E06BA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +92,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		935C61C226A8EB4C007DA7C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				935C61BF26A8EB38007DA7C6 /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		935C61C626A8EB7E007DA7C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93BFC77926A71A2E00E06BA1 /* ContentView.swift */,
+				935C61C326A8EB77007DA7C6 /* ChartView.swift */,
+				935C61C726A8EB93007DA7C6 /* SliceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		93BFC77226A71A2E00E06BA1 = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +125,9 @@
 		93BFC77726A71A2E00E06BA1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				935C61C626A8EB7E007DA7C6 /* Views */,
+				935C61C226A8EB4C007DA7C6 /* Models */,
 				93BFC77826A71A2E00E06BA1 /* digital_trainerApp.swift */,
-				93BFC77926A71A2E00E06BA1 /* ContentView.swift */,
 				93BFC77A26A71A2F00E06BA1 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -167,6 +195,8 @@
 			dependencies = (
 			);
 			name = "digital-trainer (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "digital-trainer (iOS)";
 			productReference = 93BFC77F26A71A2F00E06BA1 /* digital-trainer.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +288,8 @@
 				Base,
 			);
 			mainGroup = 93BFC77226A71A2E00E06BA1;
+			packageReferences = (
+			);
 			productRefGroup = 93BFC78026A71A2F00E06BA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +342,9 @@
 			files = (
 				93BFC7A326A71A2F00E06BA1 /* ContentView.swift in Sources */,
 				93BFC7A126A71A2F00E06BA1 /* digital_trainerApp.swift in Sources */,
+				935C61C026A8EB38007DA7C6 /* Workout.swift in Sources */,
+				935C61C426A8EB77007DA7C6 /* ChartView.swift in Sources */,
+				935C61C826A8EB93007DA7C6 /* SliceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +354,9 @@
 			files = (
 				93BFC7A426A71A2F00E06BA1 /* ContentView.swift in Sources */,
 				93BFC7A226A71A2F00E06BA1 /* digital_trainerApp.swift in Sources */,
+				935C61C126A8EB38007DA7C6 /* Workout.swift in Sources */,
+				935C61C526A8EB77007DA7C6 /* ChartView.swift in Sources */,
+				935C61C926A8EB93007DA7C6 /* SliceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
