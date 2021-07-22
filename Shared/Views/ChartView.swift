@@ -70,7 +70,6 @@ public struct ChartView: View {
                     ForEach(0..<self.values.count){ i in
                         SliceView(sliceData: self.slices[i])
                             .scaleEffect(self.activeIndex == i ? 1.03 : 1)
-                            .animation(Animation.spring())
                     }
                     
                     //Center circle
