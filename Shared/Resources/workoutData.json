@@ -1,0 +1,37 @@
+[
+    {
+        "workoutId": 1,
+        "name": "Yoga",
+        "minutes": 15,
+        "calories": 200,
+        "timestamp": "2021-06-23T13:49:51Z"
+    },
+    {
+        "workoutId": 2,
+        "name": "HIIT",
+        "minutes": 20,
+        "calories": 300,
+        "timestamp": "2021-06-23T13:49:51Z"
+    },
+    {
+        "workoutId": 3,
+        "name": "Core",
+        "minutes": 17,
+        "calories": 250,
+        "timestamp": "2021-06-23T13:49:51Z"
+    },
+    {
+        "workoutId": 4,
+        "name": "HIIT",
+        "minutes": 32,
+        "calories": 111,
+        "timestamp": "2021-07-26T04:17:47Z"
+    },
+    {
+        "workoutId": 5,
+        "name": "Core",
+        "minutes": 4,
+        "calories": 123,
+        "timestamp": "2021-07-26T04:17:47Z"
+    }
+]

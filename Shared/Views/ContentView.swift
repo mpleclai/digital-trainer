@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @State private var date = Date()
     
+    
     var body: some View {
+        
         NavigationView{
             VStack{
-                NavigationLink(destination: DayView()){
+                NavigationLink(destination: DayView(date: date, workoutData: workoutData)){
                     DatePicker(
                         "Start Date",
                         selection: $date,
