@@ -1,34 +1,34 @@
 [
     {
-        "workoutId": 1,
+        "workoutId": "5d8e0d23-e922-4f5e-9045-3ee5226f6bb7",
         "name": "Yoga",
         "minutes": 15,
         "calories": 200,
         "timestamp": "2021-06-23T13:49:51Z"
     },
     {
-        "workoutId": 2,
+        "workoutId": "1acd4795-67f4-426b-876b-1de149ed51ae",
         "name": "HIIT",
         "minutes": 20,
         "calories": 300,
         "timestamp": "2021-06-23T13:49:51Z"
     },
     {
-        "workoutId": 3,
+        "workoutId": "560e96f0-ab8b-46f8-a8c7-b45dc70e47b9",
         "name": "Core",
         "minutes": 17,
         "calories": 250,
         "timestamp": "2021-06-23T13:49:51Z"
     },
     {
-        "workoutId": 4,
+        "workoutId": "179dd55e-ebe9-46e0-864a-bf20ea4937da",
         "name": "HIIT",
         "minutes": 32,
         "calories": 111,
         "timestamp": "2021-07-26T04:17:47Z"
     },
     {
-        "workoutId": 5,
+        "workoutId": "287ef65a-d8d2-4ec5-a33b-547b06b9d0c0",
         "name": "Core",
         "minutes": 4,
         "calories": 123,

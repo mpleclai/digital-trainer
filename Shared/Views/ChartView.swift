@@ -26,17 +26,29 @@ public struct ChartView: View {
         var endDeg: Double = 0
         var tempSlices: [SliceData] = []
         
-        for (i, value) in values.enumerated() {
-            let degrees: Double = value * 360 / sum
+        if self.values.count == 0 {
+            let degrees: Double = 360
             tempSlices.append(
                 SliceData(
-                    startAngle: Angle(degrees: endDeg),
-                    endAngle: Angle(degrees: endDeg + degrees),
-                    text: String(format: "%.0f%%", value * 100 / sum),
-                    color: self.colors[i]
+                    startAngle: Angle(degrees: 0.0),
+                    endAngle: Angle(degrees: 360.0),
+                    text: String(format: "%.0f%%", 0),
+                    color: Color.gray
                 )
             )
-            endDeg += degrees
+        } else {
+            for (i, value) in values.enumerated() {
+                let degrees: Double = value * 360 / sum
+                tempSlices.append(
+                    SliceData(
+                        startAngle: Angle(degrees: endDeg),
+                        endAngle: Angle(degrees: endDeg + degrees),
+                        text: String(format: "%.0f%%", value * 100 / sum),
+                        color: self.colors[i]
+                    )
+                )
+                endDeg += degrees
+            }
         }
         return tempSlices
     }
@@ -66,10 +78,14 @@ public struct ChartView: View {
         VStack{
             GeometryReader { geometry in
                 ZStack{
-                    //Slice logic
-                    ForEach(0..<self.values.count){ i in
-                        SliceView(sliceData: self.slices[i])
-                            .scaleEffect(self.activeIndex == i ? 1.03 : 1)
+                    if values.count > 0  {
+                        //Slice logic
+                        ForEach(0..<self.values.count){ i in
+                            SliceView(sliceData: self.slices[i])
+                                .scaleEffect(self.activeIndex == i ? 1.03 : 1)
+                        }
+                    } else {
+                        SliceView(sliceData: self.slices[0])
                     }
                     
                     //Center circle
@@ -137,16 +153,24 @@ struct PieChartRows: View {
 
 struct PieChartView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack{
-            ChartView(
-                values: [10,15,12,20],
-                names: ["Yoga", "Core", "HIIT", "Strength"],
-                formatter: {value in String(format: "%.f minutes", value)},
-                textColor: Color.black,
-                colors: [Color.red, Color.purple, Color.orange, Color.green],
-                backgroundColor: Color.white,
-                innerRadiusFraction: 0.75
-            )
-        }
+        ChartView(
+            values: [10,15,12,20],
+            names: ["Yoga", "Core", "HIIT", "Strength"],
+            formatter: {value in String(format: "%.f minutes", value)},
+            textColor: Color.black,
+            colors: [Color.red, Color.purple, Color.orange, Color.green],
+            backgroundColor: Color.white,
+            innerRadiusFraction: 0.75
+        )
+        
+        ChartView(
+            values: [],
+            names: ["No Workouts"],
+            formatter: {value in String(format: "%.f minutes", value)},
+            textColor: Color.primary,
+            colors: [Color.gray],
+            backgroundColor: Color.background,
+            innerRadiusFraction: 0.75
+        ).preferredColorScheme(.dark)
     }
 }

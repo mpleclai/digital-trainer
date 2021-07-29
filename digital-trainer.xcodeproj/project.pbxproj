@@ -11,6 +11,12 @@
 		930A050326AE2E3700E7D0DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A050126AE2E3700E7D0DB /* Data.swift */; };
 		930A050C26AE2F6600E7D0DB /* workoutData.json in Resources */ = {isa = PBXBuildFile; fileRef = 930A050B26AE2F6600E7D0DB /* workoutData.json */; };
 		930A050D26AE2F6600E7D0DB /* workoutData.json in Resources */ = {isa = PBXBuildFile; fileRef = 930A050B26AE2F6600E7D0DB /* workoutData.json */; };
+		930DB30526AF357D00A6415E /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930DB30426AF357D00A6415E /* Color.xcassets */; };
+		930DB30626AF357D00A6415E /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930DB30426AF357D00A6415E /* Color.xcassets */; };
+		930DB30826AF36BB00A6415E /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DB30726AF36BB00A6415E /* ColorManager.swift */; };
+		930DB30926AF36BB00A6415E /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DB30726AF36BB00A6415E /* ColorManager.swift */; };
+		930DB30B26B22BA300A6415E /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DB30A26B22BA300A6415E /* AddWorkoutView.swift */; };
+		930DB30C26B22BA300A6415E /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DB30A26B22BA300A6415E /* AddWorkoutView.swift */; };
 		935C61C026A8EB38007DA7C6 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61BF26A8EB38007DA7C6 /* Workout.swift */; };
 		935C61C126A8EB38007DA7C6 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61BF26A8EB38007DA7C6 /* Workout.swift */; };
 		935C61C426A8EB77007DA7C6 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935C61C326A8EB77007DA7C6 /* ChartView.swift */; };
@@ -49,6 +55,9 @@
 /* Begin PBXFileReference section */
 		930A050126AE2E3700E7D0DB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		930A050B26AE2F6600E7D0DB /* workoutData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = workoutData.json; sourceTree = "<group>"; };
+		930DB30426AF357D00A6415E /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		930DB30726AF36BB00A6415E /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		930DB30A26B22BA300A6415E /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 		935C61BF26A8EB38007DA7C6 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		935C61C326A8EB77007DA7C6 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		935C61C726A8EB93007DA7C6 /* SliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliceView.swift; sourceTree = "<group>"; };
@@ -105,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				930A050B26AE2F6600E7D0DB /* workoutData.json */,
+				930DB30426AF357D00A6415E /* Color.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,6 +135,7 @@
 				935C61C326A8EB77007DA7C6 /* ChartView.swift */,
 				935C61C726A8EB93007DA7C6 /* SliceView.swift */,
 				935C61CA26A91610007DA7C6 /* DayView.swift */,
+				930DB30A26B22BA300A6415E /* AddWorkoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 				935C61C226A8EB4C007DA7C6 /* Models */,
 				93BFC77826A71A2E00E06BA1 /* digital_trainerApp.swift */,
 				93BFC77A26A71A2F00E06BA1 /* Assets.xcassets */,
+				930DB30726AF36BB00A6415E /* ColorManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -329,6 +341,7 @@
 			files = (
 				93BFC7A526A71A2F00E06BA1 /* Assets.xcassets in Resources */,
 				930A050C26AE2F6600E7D0DB /* workoutData.json in Resources */,
+				930DB30526AF357D00A6415E /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +351,7 @@
 			files = (
 				93BFC7A626A71A2F00E06BA1 /* Assets.xcassets in Resources */,
 				930A050D26AE2F6600E7D0DB /* workoutData.json in Resources */,
+				930DB30626AF357D00A6415E /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,9 +380,11 @@
 				93BFC7A326A71A2F00E06BA1 /* ContentView.swift in Sources */,
 				935C61CB26A91610007DA7C6 /* DayView.swift in Sources */,
 				93BFC7A126A71A2F00E06BA1 /* digital_trainerApp.swift in Sources */,
+				930DB30B26B22BA300A6415E /* AddWorkoutView.swift in Sources */,
 				935C61C026A8EB38007DA7C6 /* Workout.swift in Sources */,
 				935C61C426A8EB77007DA7C6 /* ChartView.swift in Sources */,
 				935C61C826A8EB93007DA7C6 /* SliceView.swift in Sources */,
+				930DB30826AF36BB00A6415E /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,9 +396,11 @@
 				93BFC7A426A71A2F00E06BA1 /* ContentView.swift in Sources */,
 				935C61CC26A91610007DA7C6 /* DayView.swift in Sources */,
 				93BFC7A226A71A2F00E06BA1 /* digital_trainerApp.swift in Sources */,
+				930DB30C26B22BA300A6415E /* AddWorkoutView.swift in Sources */,
 				935C61C126A8EB38007DA7C6 /* Workout.swift in Sources */,
 				935C61C526A8EB77007DA7C6 /* ChartView.swift in Sources */,
 				935C61C926A8EB93007DA7C6 /* SliceView.swift in Sources */,
+				930DB30926AF36BB00A6415E /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

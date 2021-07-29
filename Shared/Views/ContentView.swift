@@ -23,6 +23,7 @@ struct ContentView: View {
                     )
                     .datePickerStyle(GraphicalDatePickerStyle())
                 }
+                .navigationTitle("Digital Trainer")
                 Spacer()
             }
         }

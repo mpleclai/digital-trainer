@@ -8,8 +8,7 @@
 import Foundation
 
 class Workout: Codable, Identifiable {
-    var workoutId: Int
-    /*TODO change type to UUID */
+    var workoutId: UUID
     var name : String
     var minutes : Int
     var calories : Int

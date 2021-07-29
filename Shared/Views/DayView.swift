@@ -16,31 +16,42 @@ struct DayView: View {
             //Create workoutList of workouts for given date
             let workoutList : [Workout] = workoutListFromDate(workoutData: workoutData, date: date)
             
-            // Convert string in is08601 format to date & make readable
-            Text(workoutList[0].timestamp.toISO8601Date().toReadableString())
-                .font(.title)
-                .bold()
-            
-            ChartView(
-               values: getMinuteList(workoutData: workoutList),
-               names: getNameList(workoutData: workoutList),
-               formatter: {value in String(format: "%.f minutes", value)},
-               textColor: Color.black,
-                colors: [Color.red, Color.purple, Color.orange, Color.blue, Color.green, Color.pink],
-               backgroundColor: Color.white,
-               innerRadiusFraction: 0.75
-           )
-           .padding()
+            if (workoutList.count > 0){
+                //Chart
+                ChartView(
+                   values: getMinuteList(workoutData: workoutList),
+                   names: getNameList(workoutData: workoutList),
+                   formatter: {value in String(format: "%.f minutes", value)},
+                    textColor: Color.primary,
+                    colors: [Color.red, Color.purple, Color.orange, Color.blue, Color.green, Color.pink],
+                   backgroundColor: Color.background,
+                   innerRadiusFraction: 0.75
+               )
+                .padding()
 
-            Button("Add workout") {
-                print("eeeeee")
+            } else {
+                ChartView(
+                    values: [],
+                    names: ["No Workouts"],
+                    formatter: {value in String(format: "%.f minutes", value)},
+                    textColor: Color.primary,
+                    colors: [Color.gray],
+                    backgroundColor: Color.background,
+                    innerRadiusFraction: 0.75
+                )
+                .padding()
+            }
+           
+            
+            NavigationLink(destination: AddWorkoutView(date: date)){
                 //open form to enter name, calories, time
-                //add button to submitt form
-                //    on button click
-                //    workoutList.addWorkout(name, calories, time, date)
+                Text ("Add workout")
+                    .foregroundColor(.blue)
             }
             Spacer()
         }
+        // Convert string in is08601 format to date & make readable
+        .navigationTitle(workoutData[0].timestamp.toISO8601Date().toReadableString())
     }
 }
 
@@ -51,8 +62,8 @@ struct DayView: View {
 func workoutListFromDate(workoutData: [Workout], date: Date) -> [Workout]{
     var workoutListByDate : [Workout] = []
     for workout in workoutData {
-        /*TODO - Modify to only consider MM/DD/YYYY */
-        if workout.timestamp == date.toISO8601String(){
+        // Modify date string to only consider MM/DD/YYYY
+        if workout.timestamp.toISO8601Date().toReadableString() == date.toReadableString(){
             workoutListByDate.append(workout)
         }
     }
@@ -93,7 +104,8 @@ struct DayView_Previews: PreviewProvider {
         let currentDate = "2021-06-23T13:49:51Z"
         DayView(date: currentDate.toISO8601Date(), workoutData: workoutData)
         
-        let secondDate = "2021-07-26T04:17:47Z"
+        let secondDate = "2021-08-26T04:17:47Z"
         DayView(date: secondDate.toISO8601Date(), workoutData: workoutData)
+            .preferredColorScheme(.dark)
     }
 }
