@@ -23,10 +23,17 @@ struct ContentView: View {
                 .datePickerStyle(GraphicalDatePickerStyle())
                 
                 NavigationLink(destination: DayView(displayDate: date, workoutData: workoutData)){
-                    Text(date.toReadableString())
+                    VStack{
+                        Text(date.toReadableString())
+                            .font(.title)
+                        Text("Click For Workout Breakdown")
+                    }
+                    .padding()
+                    .border(Color.blue)
+                    .cornerRadius(15.0)
+
+                    
                 }
-                
-                
                 Spacer()
             }.navigationTitle("Digital Trainer")
         }

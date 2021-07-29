@@ -16,11 +16,11 @@ struct AddWorkoutView: View {
     var body: some View {
         VStack{
             Text(date.toReadableString())
+                .font(.title)
                 .bold()
                 .padding()
             
             VStack(alignment: .leading){
-                
                 Text("Enter workout name:")
                     .padding(.leading)
             

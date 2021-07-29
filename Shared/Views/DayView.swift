@@ -16,8 +16,8 @@ struct DayView: View {
             //Create workoutList of workouts for given date
             let workoutList : [Workout] = workoutListFromDate(workoutData: workoutData, date: displayDate)
             
+            //Chart
             if (workoutList.count > 0){
-                //Chart
                 ChartView(
                    values: getMinuteList(workoutData: workoutList),
                    names: getNameList(workoutData: workoutList),
@@ -30,6 +30,7 @@ struct DayView: View {
                 .padding()
 
             } else {
+                //No workouts case
                 ChartView(
                     values: [],
                     names: ["No Workouts"],

@@ -27,7 +27,6 @@ public struct ChartView: View {
         var tempSlices: [SliceData] = []
         
         if self.values.count == 0 {
-            let degrees: Double = 360
             tempSlices.append(
                 SliceData(
                     startAngle: Angle(degrees: 0.0),
