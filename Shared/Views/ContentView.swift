@@ -15,17 +15,20 @@ struct ContentView: View {
         
         NavigationView{
             VStack{
-                NavigationLink(destination: DayView(date: date, workoutData: workoutData)){
-                    DatePicker(
-                        "Start Date",
-                        selection: $date,
-                        displayedComponents: [.date]
-                    )
-                    .datePickerStyle(GraphicalDatePickerStyle())
+                DatePicker(
+                    "Start Date",
+                    selection: $date,
+                    displayedComponents: [.date]
+                )
+                .datePickerStyle(GraphicalDatePickerStyle())
+                
+                NavigationLink(destination: DayView(displayDate: date, workoutData: workoutData)){
+                    Text(date.toReadableString())
                 }
-                .navigationTitle("Digital Trainer")
+                
+                
                 Spacer()
-            }
+            }.navigationTitle("Digital Trainer")
         }
     }
 }

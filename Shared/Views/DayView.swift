@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct DayView: View {
-    let date: Date // Date for which to display info
+    let displayDate: Date // Date for which to display info
     var workoutData: [Workout] //Full list of workouts
-
+    
     var body: some View {
         VStack{
             //Create workoutList of workouts for given date
-            let workoutList : [Workout] = workoutListFromDate(workoutData: workoutData, date: date)
+            let workoutList : [Workout] = workoutListFromDate(workoutData: workoutData, date: displayDate)
             
             if (workoutList.count > 0){
                 //Chart
@@ -43,7 +43,7 @@ struct DayView: View {
             }
            
             
-            NavigationLink(destination: AddWorkoutView(date: date)){
+            NavigationLink(destination: AddWorkoutView(date: displayDate)){
                 //open form to enter name, calories, time
                 Text ("Add workout")
                     .foregroundColor(.blue)
@@ -51,7 +51,7 @@ struct DayView: View {
             Spacer()
         }
         // Convert string in is08601 format to date & make readable
-        .navigationTitle(workoutData[0].timestamp.toISO8601Date().toReadableString())
+        .navigationTitle(displayDate.toReadableString())
     }
 }
 
@@ -102,10 +102,10 @@ struct DayView_Previews: PreviewProvider {
     static var previews: some View {
         // Create Date Formatter
         let currentDate = "2021-06-23T13:49:51Z"
-        DayView(date: currentDate.toISO8601Date(), workoutData: workoutData)
+        DayView(displayDate: currentDate.toISO8601Date(), workoutData: workoutData)
         
         let secondDate = "2021-08-26T04:17:47Z"
-        DayView(date: secondDate.toISO8601Date(), workoutData: workoutData)
+        DayView(displayDate: secondDate.toISO8601Date(), workoutData: workoutData)
             .preferredColorScheme(.dark)
     }
 }
